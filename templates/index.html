@@ -12,18 +12,18 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: white; /* Fondo blanco */
-            color: black; /* Texto negro */
-            font-family: Arial, sans-serif; /* Tipografía */
+            background-color: white; 
+            color: black;
+            font-family: Arial, sans-serif; 
         }
         .clock {
             position: relative;
             width: 300px;
             height: 300px;
-            border: 8px solid black; /* Borde negro */
+            border: 8px solid black; 
             border-radius: 50%;
-            background-color: white; /* Fondo blanco */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
         }
         .clock .center {
             position: absolute;
@@ -31,71 +31,71 @@
             left: 50%;
             width: 12px;
             height: 12px;
-            background-color: black; /* Centro negro */
+            background-color: black;
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra del centro */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
         }
         .hand {
             position: absolute;
             bottom: 50%;
             left: 50%;
             transform-origin: bottom;
-            background-color: black; /* Manecillas negras */
+            background-color: black;
             transform: translateX(-50%);
-            border-radius: 4px; /* Esquinas redondeadas */
-            transition: transform 0.5s ease; /* Transición suave */
+            border-radius: 4px; 
+            transition: transform 0.5s ease; 
         }
         .hour-hand {
             width: 6px;
             height: 60px;
-            background-color: black; /* Hora negra */
+            background-color: black; 
         }
         .minute-hand {
             width: 4px;
             height: 90px;
-            background-color: black; /* Minuto negro */
+            background-color: black; 
         }
         .second-hand {
             width: 2px;
             height: 100px;
-            background-color: red; /* Segundo rojo */
-            transition: transform 0.1s ease; /* Transición suave */
+            background-color: red; 
+            transition: transform 0.1s ease; 
         }
         .number {
             position: absolute;
-            color: black; /* Números negros */
+            color: black; 
             font-size: 1.5em;
             width: 30px;
             height: 30px;
             text-align: center;
             transform-origin: center;
-            font-weight: bold; /* Negrita para números */
+            font-weight: bold; 
         }
         .digital-clock {
             margin-top: 20px;
             font-size: 2em;
-            color: black; /* Reloj digital negro */
-            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
-            padding: 10px 20px; /* Espaciado */
-            border-radius: 10px; /* Esquinas redondeadas */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-            transition: background-color 0.3s; /* Transición suave para el fondo */
+            color: black; 
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 10px 20px;
+            border-radius: 10px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+            transition: background-color 0.3s; 
         }
         .digital-clock:hover {
-            background-color: rgba(255, 255, 255, 1); /* Cambio de fondo al pasar el mouse */
+            background-color: rgba(255, 255, 255, 1); 
         }
         h1 {
-            color: black; /* Título negro */
+            color: black; 
             margin-bottom: 20px;
-            font-size: 2.5em; /* Tamaño de fuente mayor */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra del título */
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
         }
         footer {
             margin-top: 20px;
-            color: black; /* Footer negro */
-            font-size: 1em; /* Tamaño de fuente */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra del footer */
+            color: black; 
+            font-size: 1em; 
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
         }
     </style>
 </head>
@@ -108,13 +108,13 @@
         <div class="hand minute-hand" id="minuteHand"></div>
         <div class="hand second-hand" id="secondHand"></div>
 
-        <!-- Colocamos los números en sus posiciones respectivas -->
+        
         <div class="number" style="top: 10px; left: 50%; transform: translate(-50%, -50%);">12</div>
         <div class="number" style="top: 50%; left: 290px; transform: translate(-50%, -50%);">3</div>
         <div class="number" style="top: 290px; left: 50%; transform: translate(-50%, -50%);">6</div>
         <div class="number" style="top: 50%; left: 10px; transform: translate(-50%, -50%);">9</div>
 
-        <!-- Números intermedios -->
+       
         <div class="number" style="top: 35px; left: 215px; transform: translate(-50%, -50%);">1</div>
         <div class="number" style="top: 80px; left: 260px; transform: translate(-50%, -50%);">2</div>
         <div class="number" style="top: 215px; left: 260px; transform: translate(-50%, -50%);">4</div>
@@ -137,10 +137,10 @@
             const seconds = now.getSeconds();
             const minutes = now.getMinutes();
             let hours = now.getHours();
-            const isAM = hours < 12; // Determina si es AM o PM
+            const isAM = hours < 12; 
 
-            // Convierte el formato de 24 horas a 12 horas
-            hours = hours % 12 || 12; // Convierte 0 a 12
+            
+            hours = hours % 12 || 12; 
 
             const secondDegrees = seconds * 6;
             const minuteDegrees = minutes * 6;
@@ -150,10 +150,10 @@
             document.getElementById('minuteHand').style.transform = `rotate(${minuteDegrees}deg)`;
             document.getElementById('hourHand').style.transform = `rotate(${hourDegrees}deg)`;
 
-            // Actualizar el reloj digital
+           
             const formattedHours = String(hours).padStart(2, '0');
             const formattedMinutes = String(minutes).padStart(2, '0');
-            const period = isAM ? 'AM' : 'PM'; // Determina AM o PM
+            const period = isAM ? 'AM' : 'PM'; 
             document.getElementById('digitalClock').textContent = `${formattedHours}:${formattedMinutes} ${period}`;
         }
 
